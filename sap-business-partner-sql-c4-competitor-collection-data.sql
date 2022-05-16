@@ -1,0 +1,62 @@
+CREATE TABLE `sap_competitor_collection_data`
+(
+			`ObjectID`                          varchar(70) DEFAULT NULL
+			`CompetitorID`                      varchar(10) DEFAULT NULL
+			`CompetitorUUID`                    varchar(80) DEFAULT NULL
+			`StatusCode`                        varchar(2) DEFAULT NULL
+			`StatusCodeText`                    varchar(32) DEFAULT NULL
+			`ClassificationCode`                varchar(1) DEFAULT NULL
+			`ClassificationCodeText`            varchar(32) DEFAULT NULL
+			`BusinessPartnerFormattedName`      varchar(480) DEFAULT NULL
+			`Name`                              varchar(40) DEFAULT NULL
+			`AdditionalName`                    varchar(40) DEFAULT NULL
+			`FormattedPostalAddressDescription` varchar(480) DEFAULT NULL
+			`CountryCode`                       varchar(3) DEFAULT NULL
+			`CountryCodeText`                   varchar(32) DEFAULT NULL
+			`RegionCode`                        varchar(6) DEFAULT NULL
+			`RegionCodeText`                    varchar(32) DEFAULT NULL
+			`CareOfName`                        varchar(40) DEFAULT NULL
+			`AddressLine1`                      varchar(40) DEFAULT NULL
+			`AddressLine2`                      varchar(40) DEFAULT NULL
+			`HouseNumber`                       varchar(10) DEFAULT NULL
+			`Street`                            varchar(60) DEFAULT NULL
+			`AddressLine4`                      varchar(40) DEFAULT NULL
+			`AddressLine5`                      varchar(40) DEFAULT NULL
+			`City`                              varchar(40) DEFAULT NULL
+			`AdditionalCityName`                varchar(40) DEFAULT NULL
+			`District`                          varchar(40) DEFAULT NULL
+			`County`                            varchar(40) DEFAULT NULL
+			`CompanyPostalCode`                 varchar(10) DEFAULT NULL
+			`StreetPostalCode `                 varchar(10) DEFAULT NULL
+			`POBoxPostalCode`                   varchar(10) DEFAULT NULL
+			`POBox`                             varchar(10) DEFAULT NULL
+			`POBoxDeviatingCountryCode`         varchar(3) DEFAULT NULL
+			`POBoxDeviatingCountryCodeText`     varchar(32) DEFAULT NULL
+			`POBoxDeviatingCity`                varchar(40) DEFAULT NULL
+			`TimeZoneCode`                      varchar(10) DEFAULT NULL
+			`TimeZoneCodeText`                  varchar(32) DEFAULT NULL
+			`TaxJurisdictionCode`               varchar(25) DEFAULT NULL
+			`TaxJurisdictionCodeText`           varchar(32) DEFAULT NULL
+			`POBoxDeviatingStateCode`           varchar(6) DEFAULT NULL
+			`POBoxDeviatingStateCodeText`       varchar(32) DEFAULT NULL
+			`Phone`                             varchar(40) DEFAULT NULL
+			`Fax`                               varchar(40) DEFAULT NULL
+			`Email`                             varchar(255) DEFAULT NULL
+			`WebSite`                           varchar(1280) DEFAULT NULL
+			`LanguageCode`                      varchar(2) DEFAULT NULL
+			`LanguageCodeText`                  varchar(32) DEFAULT NULL
+			`BestReachedByCode`                 varchar(3) DEFAULT NULL
+			`BestReachedByCodeText`             varchar(32) DEFAULT NULL
+			`NormalisedPhone`                   varchar(40) DEFAULT NULL
+			`CreatedOn`                         varchar(80) DEFAULT NULL
+			`CreatedBy`                         varchar(480) DEFAULT NULL
+			`CreatedByIdentityUUID`             varchar(80) DEFAULT NULL
+			`ChangedOn`                         varchar(80) DEFAULT NULL
+			`ChangedBy`                         varchar(480) DEFAULT NULL
+			`ChangedByIdentityUUID`             varchar(80) DEFAULT NULL
+			`EntityLastChangedOn`               varchar(80) DEFAULT NULL
+			`ETag`                              varchar(80) DEFAULT NULL
+             PRIMARY KEY (`PartnerID`)
+	   	     CONSTRAINT `SAPCompetitorCollectionData_fk` FOREIGN KEY (`PartnerID`) REFERENCES `sap_partner_collection_data` (`PartnerID`)
+) ENGINE = InnoDB
+ DEFAULT CHARSET = utf8mb4;
