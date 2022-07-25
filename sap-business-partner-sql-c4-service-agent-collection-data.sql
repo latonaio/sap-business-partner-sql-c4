@@ -1,7 +1,7 @@
 CREATE TABLE `sap_service_agent_collection_data`
 (
-			`ObjectID`                          varchar(70) DEFAULT NULL,
 			`ServiceAgentID`                    varchar(20) NOT NULL,
+			`ObjectID`                          varchar(70) DEFAULT NULL,
 			`ServiceAgentUUID`                  varchar(80) DEFAULT NULL,
 			`LifeCycleStatusCode`               varchar(2) DEFAULT NULL,
 			`LifeCycleStatusCodeText`           varchar(32) DEFAULT NULL,

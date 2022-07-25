@@ -1,8 +1,8 @@
 CREATE TABLE `sap_partner_address_data`
 (
+			`PartnerID`                                    varchar(10) NOT NULL,
 			`ObjectID`                                     varchar(70) DEFAULT NULL,
 			`ParentObjectID`                               varchar(70) DEFAULT NULL,
-			`PartnerID`                                    varchar(10) NOT NULL,
 			`MainIndicator`                                tinyint(1) DEFAULT NULL,
 			`ShipTo`                                       tinyint(1) DEFAULT NULL,
 			`DefaultShipTo`                                tinyint(1) DEFAULT NULL,
@@ -52,6 +52,5 @@ CREATE TABLE `sap_partner_address_data`
 			`NormalisedMobile`                             varchar(40) DEFAULT NULL,
 			`ETag`                                         varchar(80) DEFAULT NULL,
     PRIMARY KEY (`PartnerID`)
-	CONSTRAINT `SAPPartnerAddressData_fk` FOREIGN KEY (`PartnerID`) REFERENCES `sap_partner_collection_data` (`PartnerID`)
 ) ENGINE = InnoDB
  DEFAULT CHARSET = utf8mb4;

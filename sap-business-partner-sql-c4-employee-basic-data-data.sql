@@ -1,10 +1,10 @@
 CREATE TABLE `sap_business_user_employee_basic_data`
 (
+			`UserID`                           varchar(40) NOT NULL,
 			`ObjectID`                         varchar(70) DEFAULT NULL,
 			`ETag`                             varchar(80) DEFAULT NULL,
 			`EmployeeID`                       varchar(20) DEFAULT NULL,
 			`EmployeeUUID`                     varchar(80) DEFAULT NULL,
-			`UserID`                           varchar(40) NOT NULL,
 			`IdentityUUID`                     varchar(80) DEFAULT NULL,
 			`BusinessPartnerID`                varchar(10) DEFAULT NULL,
 			`CurrentInternalEmployeeIndicator` tinyint(1) DEFAULT NULL,
@@ -48,7 +48,6 @@ CREATE TABLE `sap_business_user_employee_basic_data`
 			`ChangedBy`                        varchar(480) DEFAULT NULL,
 			`EntityLastChangedOn`              varchar(80) DEFAULT NULL,
              PRIMARY KEY (`UserID`)
-	   	     CONSTRAINT `SAPBusinessUserEmployeeBasicData_fk` FOREIGN KEY (`UserID`) REFERENCES `sap_business_user_employee_basic_data` (`UserID`)
 ) ENGINE = InnoDB
  DEFAULT CHARSET = utf8mb4;
  

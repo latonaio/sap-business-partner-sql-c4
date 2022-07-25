@@ -1,7 +1,7 @@
 CREATE TABLE `sap_partner_collection_data`
 (
-    		`ObjectID`                                       varchar(70) DEFAULT NULL,
 			`PartnerID`                                      varchar(10) NOT NULL,
+    		`ObjectID`                                       varchar(70) DEFAULT NULL,
 			`PartnerUUID`                                    varchar(80) DEFAULT NULL,
 			`LifeCycleStatusCode`                            varchar(2) DEFAULT NULL,
 			`LifeCycleStatusCodeText`                        varchar(32) DEFAULT NULL,
