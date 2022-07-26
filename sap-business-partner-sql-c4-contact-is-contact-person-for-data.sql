@@ -1,7 +1,7 @@
-CREATE TABLE `sap_contact_is_contact_person_for_data`
+CREATE TABLE `sap_business_partner_contact_is_contact_person_for_data`
 (
+	        `ObjectID`                                  varchar(70) NOT NULL,
 			`ContactID`                                 varchar(10) NOT NULL,
-	        `ObjectID`                                  varchar(70) DEFAULT NULL,
 			`ParentObjectID`                            varchar(70) DEFAULT NULL,
 			`ETag`                                      varchar(80) DEFAULT NULL,
 			`AccountID`                                 varchar(10) DEFAULT NULL,
@@ -27,7 +27,7 @@ CREATE TABLE `sap_contact_is_contact_person_for_data`
 			`BestReachedByCodeText`                     varchar(32) DEFAULT NULL,
 			`OrganisationAddressUUID`                   varchar(80) DEFAULT NULL,
 			`EntityLastChangedOn`                       varchar(80) DEFAULT NULL,
-    PRIMARY KEY (`ContactID`),
-    CONSTRAINT `SAPBusinessPartnerContactIsContactPersonForData` FOREIGN KEY (`ContactID`) REFERENCES `sap_contact_collection_data` (`ContactID`)
+    PRIMARY KEY (`ObjectID`, `ContactID`),
+    CONSTRAINT `SAPBusinessPartnerContactIsContactPersonForData` FOREIGN KEY (`ObjectID`) REFERENCES `sap_business_partner_contact_collection_data` (`ObjectID`)
 ) ENGINE = InnoDB
  DEFAULT CHARSET = utf8mb4;

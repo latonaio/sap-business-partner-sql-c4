@@ -1,7 +1,7 @@
 CREATE TABLE `sap_service_agent_collection_data`
 (
+			`ObjectID`                          varchar(70) NOT NULL,
 			`ServiceAgentID`                    varchar(20) NOT NULL,
-			`ObjectID`                          varchar(70) DEFAULT NULL,
 			`ServiceAgentUUID`                  varchar(80) DEFAULT NULL,
 			`LifeCycleStatusCode`               varchar(2) DEFAULT NULL,
 			`LifeCycleStatusCodeText`           varchar(32) DEFAULT NULL,
@@ -67,6 +67,6 @@ CREATE TABLE `sap_service_agent_collection_data`
 			`ChangedByIdentityUUID`             varchar(80) DEFAULT NULL,
 			`EntityLastChangedOn`               varchar(80) DEFAULT NULL,
 			`ETag`                              varchar(80) DEFAULT NULL,
-            PRIMARY KEY (`ServiceAgentID`)
+            PRIMARY KEY (`ObjectID`, `ServiceAgentID`)
 ) ENGINE = InnoDB
  DEFAULT CHARSET = utf8mb4;

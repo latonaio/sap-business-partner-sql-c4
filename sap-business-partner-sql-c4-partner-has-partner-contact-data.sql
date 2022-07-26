@@ -1,7 +1,7 @@
 CREATE TABLE `sap_partner_has_partner_contact_data`
 (
+    		`ObjectID`            varchar(70) NOT NULL,
 			`PartnerID`           varchar(10) NOT NULL,
-			`ObjectID`            varchar(70) DEFAULT NULL,
 			`ParentObjectID`      varchar(70) DEFAULT NULL,
 			`PartnerContactID`    varchar(20) DEFAULT NULL,
 			`MainIndicator`       tinyint(1) DEFAULT NULL,
@@ -13,6 +13,7 @@ CREATE TABLE `sap_partner_has_partner_contact_data`
 			`VIPReasonCodeText`   varchar(32) DEFAULT NULL,
 			`EntityLastChangedOn` varchar(80) DEFAULT NULL,
 			`ETag`                varchar(80) DEFAULT NULL,
-    PRIMARY KEY (`PartnerID`)
+    PRIMARY KEY (`ObjectID`, `PartnerID`),
+    CONSTRAINT `SAPBusinessPartnerPartnerHasPartnerContactData` FOREIGN KEY (`ObjectID`) REFERENCES `sap_partner_collection_data` (`ObjectID`)
 ) ENGINE = InnoDB
  DEFAULT CHARSET = utf8mb4;

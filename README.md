@@ -1,6 +1,6 @@
 # sap-business-partner-sql-c4
 
-sap-business-partner-sql-c4は、主にエッジアプリケーションにおいて、SAPと連携されたプロセス指図データを保存するSQLテーブルを作成するためのレポジトリです。  
+sap-business-partner-sql-c4は、主にエッジアプリケーションにおいて、SAPと連携されたビジネスパートナーデータを保存するSQLテーブルを作成するためのレポジトリです。  
 sap-business-partner-sql-c4 は、そのままクラウド環境におけるアプリケーションにも、適用可能です。  
 
 ## 前提条件  
@@ -13,7 +13,7 @@ https://api.sap.com/api/businesspartner/overview
 
 sap-business-partner-sql-c4 には、sqlの設定ファイルとして、以下のファイルが含まれています。  
 
-* sap-business-partner-partner-collection-data.sql（SAP ビジネスパートナ - パートナデータ）
+* sap-business-partner-sql-c4-partner-collection-data.sql（SAP ビジネスパートナ - パートナデータ）
 * sap-business-partner-sql-c4-partner-address-data.sql（SAP ビジネスパートナ - アドレスデータ） 
 * sap-business-partner-sql-c4-partner-has-partner-contact-data.sql（SAP ビジネスパートナ - コンタクトデータ） 
 * sap-business-partner-sql-c4-contact-collection-data.sql（SAP ビジネスパートナ - コンタクトデータ） 
